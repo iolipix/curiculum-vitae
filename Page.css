@@ -1,0 +1,877 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #F3F4F6;
+    color: #1e2437;
+    display: flex;
+    flex-direction: column; /* Permet une structure verticale avec flexbox */
+    min-height: 100vh; /* Assure que la hauteur du body prend toute la fenêtre */
+}
+
+.video-container {
+    display: flex;
+    flex-direction: column; /* Vidéos l'une en dessous de l'autre */
+    gap: 1rem; /* Espace entre les vidéos */
+    align-items: center; /* Centre horizontalement les vidéos */
+}
+
+.video-container iframe {
+    width: 100%; /* Vidéos prennent toute la largeur */
+    max-width: 800px; /* Largeur maximale de la vidéo */
+    height: auto; /* Hauteur automatique */
+    border-radius: 8px; /* Coins arrondis (optionnel) */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+}
+
+
+
+/* Styles pour les images des logos */
+.slider .logo {
+    max-width: 100px;
+    max-height: 100px;
+    object-fit: contain;
+    margin: 10px auto;
+    display: block;
+    border-radius: 10px;
+}
+
+/* Styles pour les logos */
+.logo {
+    max-width: 100px; /* Taille maximale du logo */
+    max-height: 100px; /* Limite la hauteur */
+    margin: 10px; /* Espacement autour du logo */
+    display: inline-block; /* Pour afficher plusieurs logos côte à côte */
+    object-fit: contain; /* Maintient les proportions du logo */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Effet de transition */
+}
+
+/* Effet au survol */
+.logo:hover {
+    transform: scale(1.1); /* Agrandissement léger au survol */
+    opacity: 0.8; /* Réduction légère de l'opacité au survol */
+}
+
+
+
+/* Conteneur principal */
+.sound-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Conteneur du son Spotify */
+.spotify-container {
+    width: 100%;
+    margin-bottom: 20px; /* Espace entre le son et les photos */
+}
+
+/* Conteneur des photos */
+.photos-container-chanteur {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px; /* Espace entre les photos */
+    margin-bottom: 20px; /* Espace entre les photos et la description */
+}
+
+.photo-chanteur {
+    width: 23%; /* Largeur des photos */
+    height: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  	border-radius: 10px;
+}
+
+/* Texte de description */
+.description {
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    color: #333;
+    margin-top: 10px;
+}
+
+.description p {
+    margin: 0;
+}
+
+
+
+/* Réinitialiser marges et paddings uniquement pour .influencer-container et ses enfants */
+.influencer-container, 
+.influencer-container * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.influencer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Centre le contenu verticalement dans le conteneur */
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    height: 850px; /* Ajuste la hauteur du conteneur pour ne pas laisser les vidéos déborder */
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centre verticalement */
+    align-items: center; /* Centre horizontalement */
+    text-align: center; /* Centrer le texte */
+    flex: 1; /* Occupe l'espace restant */
+    padding-right: 30px; /* Ajoute un espacement entre l'image et le TikTok */
+}
+
+.info h1 {
+    font-size: 2rem;
+    color: #333;
+    margin: 10px 0 10px 0; /* Espacement entre le titre et l'image */
+}
+
+.photo {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 50%;
+    margin-top: 15px;
+}
+
+.tiktoks {
+    display: flex; /* Aligne les vidéos horizontalement */
+    justify-content: space-between; /* Espace égal entre les vidéos */
+    gap: 30px; /* Espacement entre les vidéos */
+    flex-wrap: wrap; /* Permet aux vidéos de passer à la ligne si nécessaire */
+    width: 100%; /* S'assure que le conteneur ne dépasse pas la largeur de son parent */
+    height: 100%; /* Remplir toute la hauteur disponible dans le conteneur */
+}
+
+.tiktok iframe {
+    width: 100%; /* La vidéo prendra toute la largeur disponible dans le conteneur */
+    max-width: 500px; /* Largeur augmentée des vidéos */
+    height: 800px; /* Hauteur plus grande pour les vidéos */
+    border-radius: 10px;
+}
+
+
+
+.langues {
+    display: flex; /* Alignement des images */
+    flex-wrap: wrap; /* Permet le retour à la ligne */
+    justify-content: center; /* Centre les images horizontalement */
+    gap: 15px; /* Espacement entre les images */
+    max-width: 1200px; /* Largeur maximale du conteneur */
+    margin: 0 auto; /* Centre le conteneur horizontalement */
+    padding: 30px; /* Espace autour du conteneur */
+    box-sizing: border-box; /* Inclut le padding dans la largeur totale */
+}
+
+.langues .image {
+    flex: 1 1 calc(25% - 15px); /* Par défaut, 4 images par ligne */
+    max-width: 200px; /* Limite la largeur maximale */
+    height: auto; /* Conserve les proportions des images */
+    border-radius: 10px; /* Coins arrondis (optionnel) */
+    transition: transform 0.2s; /* Animation au survol */
+}
+
+.langues .image:hover {
+    transform: scale(1.1); /* Zoom au survol */
+    cursor: pointer; /* Change le curseur au survol */
+}
+
+
+
+
+#main-title a {
+    color: #1e2437;  /* Couleur du texte */
+    text-decoration: none;  /* Enlève le soulignement du lien */
+    font-weight: bold;  /* Met le texte en gras */
+}
+
+/* Conteneur d'image pour s'assurer que l'effet est bien visible */
+.image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px; /* Ajout pour un effet arrondi, si souhaité */
+}
+
+
+.diplomes {
+    text-align: center; /* Centre le texte et les images */
+    margin: 2rem 0; /* Ajoute un espacement autour de la section */
+    border-bottom: 1px solid #e0e0e0;
+  	padding: 1.5rem 0;
+}
+
+.diplomes p {
+    font-size: 1.2rem; /* Ajuste la taille du texte */
+    color: #333; /* Couleur du texte */
+    margin-bottom: 1rem; /* Ajoute un espacement sous le texte */
+}
+
+.diplomes-images {
+    display: flex; /* Permet un alignement horizontal des images */
+    justify-content: center; /* Centre les images horizontalement */
+    gap: 1rem; /* Ajoute un espace entre les images */
+  	flex-wrap: wrap; /* Permet aux images de passer à la ligne si nécessaire */
+}
+
+.diplomes-images img {
+    width: 500px; /* Taille fixe pour les images */
+    height: auto; /* Maintient le ratio d'aspect */
+    border-radius: 8px; /* Ajoute des coins arrondis */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ajoute une ombre */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Effets au survol */
+}
+
+.diplomes-images img:hover {
+    transform: scale(1.1); /* Agrandit légèrement l'image au survol */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Accentue l'ombre au survol */
+}
+
+
+/* Style de base pour les images */
+.image {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 12px; /* Pour harmoniser avec le conteneur */
+}
+
+/* Effet au survol : zoom et ombre */
+.image:hover {
+    transform: scale(1.1); /* Agrandit légèrement l'image */
+    z-index: 1; /* Assure que l'image reste au-dessus des autres éléments */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Ombre pour accentuer l'effet */
+}
+
+main.content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 5rem; /* Ajustez cette valeur selon la hauteur de votre barre de navigation */
+}
+
+.section-title {
+    font-size: 2.5rem; /* Assurez une taille adaptée */
+    color: #333; /* Couleur visible */
+    text-align: left; /* Centre le texte, si nécessaire */
+    margin: 1rem 0; /* Ajout d'espacement au-dessus et en dessous */
+}
+
+.section-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.section-lol {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.section-content.reverse {
+  flex-direction: row-reverse;
+}
+
+.section-content img {
+  width: 50%;
+  max-width: 1000px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.text-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.text-block .sub-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0 0 0.5rem;
+  color: #00296b;
+}
+
+.text-block p {
+  line-height: 1.6;
+  font-size: 1.2rem; /* Ajuste la taille du texte */
+  color: #333; /* Couleur du texte */
+  margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    position: fixed; /* Fait que le header reste toujours en haut */
+    top: 0; /* Place le header au sommet de la fenêtre */
+    left: 0;
+    width: 100%; /* S'assure que le header prend toute la largeur */
+    z-index: 1000; /* Place le header au-dessus des autres éléments */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ajoute une ombre pour démarquer le header */
+    box-sizing: border-box; /* Inclut padding et bordures dans la largeur totale */
+}
+
+main {
+    padding-top: 70px; /* Ajuste cette valeur selon la hauteur de ton header */
+}
+
+header h1 {
+    font-size: 1.5rem;
+    color: #1e2437;
+    font-weight: bold;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between; /* Espace entre le titre et les liens */
+    align-items: center;
+    max-width: 1200px; /* Largeur maximale pour la navbar */
+    width: 100%; /* Prend toute la largeur disponible */
+    padding: 0 20px; /* Ajoute un peu de marge intérieure */
+    box-sizing: border-box;
+    margin: 0 auto; /* Centre la navbar dans le header */
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    gap: 20px; /* Espacement entre les liens */
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.9rem;
+  	padding: 5px 10px;
+    transition: color 0.3s ease-in-out;
+
+}
+
+nav a:hover {
+    color: #3498db; /* Couleur des liens au survol */
+}
+
+/* Footer */
+footer {
+    background-color: #121829;
+    color: #ffffff;
+    padding: 30px 60px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%; /* S'assure que le fond prend toute la largeur */
+    box-sizing: border-box; /* Prendre en compte padding et border dans la largeur totale */
+    text-align: left; /* Aligner le texte à gauche par défaut */
+    display: flex;
+    align-items: center;
+    margin: 0 auto; /* Centrer le footer */
+}
+
+footer .footer-content {
+    width: 100%; /* S'assurer que le conteneur prend toute la largeur de son parent */
+    max-width: 1200px; /* Largeur maximale pour le contenu */
+    margin: 0 auto; /* Centrer le contenu */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Trois colonnes de largeur égale */
+    gap: 20px; /* Espace entre les colonnes */
+
+}
+
+footer .footer-content > div {
+    display: flex;
+    flex-direction: column; /* Organiser les éléments verticalement dans chaque colonne */
+    gap: 1px; /* Espace entre les éléments dans chaque colonne */
+}
+
+footer div {
+    margin-bottom: 10px;
+}
+
+footer a {
+    color: #aaa;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #3498db; /* Couleur des liens au survol */
+}
+
+/* Style for the copyright text */
+.footer-copyright {
+    width: 100%; /* Ensure it takes up the full width */
+    text-align: center;
+    margin-top: 20px; /* Space between the content and copyright */
+    font-size: 0.9rem;
+    color: #ffffff;
+    border-top: 1px solid #333; /* Ligne de séparation en haut */
+    padding-top: 10px;
+  	grid-column: span 3;
+
+  }
+  
+
+.language-selector {
+    margin-left: 20px;
+}
+
+select {
+    background-color: #1e2437;
+    color: #ffffff;
+    border: none;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.image-placeholder img {
+    width: 50%;
+    height: 50%;
+    margin-left: 20px auto;
+    background-color: #444;
+    border-radius: 10px;
+    justify-content: flex-start;
+}
+
+.language-selector {
+    margin-left: 20px;
+}
+
+select {
+    background-color: #1e2437;
+    color: #ffffff;
+    border: none;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+/* Styles pour le menu burger */
+.burger {
+	display: none; /* Masqué par défaut */
+    flex-direction: column;
+    justify-content: space-around;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+    position: absolute; /* Permet de le positionner librement */
+	top: 40%; /* Aligne verticalement au centre du header */
+    left: 60%; /* Aligne horizontalement au centre du header */
+    z-index: 1000; /* S'assure qu'il reste au-dessus des autres éléments */
+}
+
+.burger span {
+    display: block;
+    height: 3px; /* Épaisseur des barres */
+    width: 100%; /* Largeur des barres */
+    background-color: #121829; /* Barres en bleu foncé */
+    border-radius: 2px; /* Coins arrondis des barres */
+    transition: all 0.3s ease-in-out; /* Ajoute une transition pour l'état actif */
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 3px 0;
+}
+
+
+nav {
+    display: flex;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #1e2437;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+/* Style contact */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group input, .form-group textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #2980b9; /* Bordure bleue claire */
+    border-radius: 5px;
+    background-color: #2c3e50; /* Fond gris-bleu sombre */
+    color: #ffffff; /* Texte blanc */
+    transition: border 0.3s ease;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    border-color: #3498db; /* Bordure bleu clair au focus */
+    outline: none;
+}
+
+.submit-btn {
+    padding: 10px 20px;
+    background-color: #3498db; /* Fond bleu clair */
+    color: #ffffff; /* Texte blanc */
+    border: none;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #2980b9; /* Couleur du bouton au survol (bleu plus foncé) */
+}
+
+.close-menu {
+  display: none;
+  }
+
+
+/* Responsivité */
+@media (max-width: 950px) {
+    /* Cacher les éléments de menu par défaut */
+    nav ul {
+        display: none; /* Cache les liens de navigation */
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Affichage du menu burger */
+    nav.active ul {
+		display: flex; /* Affiche les liens lorsque "active" est ajouté */
+        flex-direction: column; /* Positionne les liens verticalement */
+        position: fixed; /* Fixe le menu en haut de l'écran */
+        top: 0; /* Colle le menu en haut */
+        right: 0; /* Aligne le menu sur le côté droit */
+        background-color: #1e2437; /* Fond sombre */
+        width: 100%; /* Prend toute la largeur */
+        max-height: calc(100vh - 60px); /* Limite la hauteur du menu pour qu'il ne prenne pas toute la hauteur de la page */
+        overflow-y: auto; /* Ajoute une barre de défilement si le contenu dépasse */
+        padding: 20px;
+        box-sizing: border-box; /* Assure que le padding est inclus dans la largeur */
+        z-index: 999; /* Mets le menu au-dessus des autres éléments */
+    	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); /* Ombre légère */
+	}
+
+    /* Liens dans le menu burger */
+    nav.active ul li {
+        margin: 10px 0; /* Espacement entre les liens */
+        text-align: center; /* Centre les liens */
+    }
+
+    /* Apparence des liens du menu */
+    nav.active ul li a {
+        color: #ffffff; /* Texte en blanc */
+        font-size: 1.2rem;
+        text-decoration: none;
+        padding: 10px;
+        transition: color 0.3s ease;
+    }
+
+    nav.active ul li a:hover {
+        color: #3498db; /* Couleur au survol */
+    }
+
+    /* Burger bouton */
+    .burger {
+        display: flex; /* Affiche le bouton burger */
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30px;
+        height: 25px;
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        z-index: 1000; /* Place le burger bouton au-dessus du reste */
+    }
+
+    /* Barres du burger */
+    .burger span {
+        display: block;
+        width: 100%;
+        height: 4px;
+        background-color: #1e2437; /* Couleur des barres */
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+
+    /* Bouton pour fermer le menu (croix) */
+    .close-menu {
+        position: absolute;
+        top: 20px; /* Position en haut à droite */
+        right: 20px;
+        width: 30px;
+        height: 30px;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        z-index: 1001; /* Met la croix au-dessus du menu */
+        display: none; /* Caché par défaut */
+    }
+
+    .close-menu::before,
+    .close-menu::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 20px;
+        height: 2px;
+        background-color: #ffffff; /* Couleur de la croix */
+        transition: all 0.3s ease;
+    }
+
+    .close-menu::before {
+        transform: translate(-50%, -50%) rotate(45deg); /* Premier barre de la croix */
+    }
+
+    .close-menu::after {
+        transform: translate(-50%, -50%) rotate(-45deg); /* Deuxième barre de la croix */
+    }
+
+    /* Affichage de la croix quand le menu est actif */
+    nav.active .close-menu {
+        display: block; /* Affiche la croix lorsqu'on clique sur le burger */
+    }
+
+/* Style du selecteur de langue */
+    .language-selector {
+        margin-left: 20px;
+    }
+
+    .language-selector select {
+        background-color: #1e2437;
+        color: #ffffff;
+        border: none;
+        padding: 5px;
+        border-radius: 4px;
+        font-size: 0.9rem;
+    }
+
+	footer {
+    	background-color: #121829;
+    	color: #ffffff;
+    	padding: 20px;
+    	display: flex;
+    	justify-content: space-between;
+    	flex-wrap: wrap;
+    	width: 100%; /* S'assure que le footer prend toute la largeur */
+    	box-sizing: border-box; /* Prendre en compte padding et border dans la largeur totale */
+	}
+  
+	footer .footer-content {
+    	background-color: #121829;
+    	color: #ffffff;
+    	padding: 20px;
+    	display: flex;
+    	justify-content: space-between;
+    	flex-wrap: wrap;
+    	width: 100%; /* S'assure que le footer prend toute la largeur */
+    	box-sizing: border-box; /* Prendre en compte padding et border dans la largeur totale */
+	}
+
+	footer div {
+    	margin-bottom: 10px;
+	}
+
+	footer a {
+    	color: #ffffff;
+    	text-decoration: none;
+	}
+
+
+/* Style for the copyright text */
+	footer .footer-copyright {
+    	width: 100%; /* Ensure it takes up the full width */
+    	text-align: center;
+    	margin-top: 20px; /* Space between the content and copyright */
+    	font-size: 0.9rem;
+    	color: #ffffff;
+	}
+
+    #main-title a {
+        color: #1e2437;  /* Couleur du texte */
+        text-decoration: none;  /* Enlève le soulignement du lien */
+        font-weight: bold;  /* Met le texte en gras */
+    }
+    .section-content {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+  	.section-lol {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+  	.section-lol img {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .section-content img {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .text-block {
+      align-items: center;
+    }
+  
+  	.section-content.reverse {
+        flex-direction: column; /* Affiche les éléments en colonne */
+        align-items: center; /* Centre le contenu */
+        text-align: center; /* Centre le texte */
+    }
+
+    .section-content.reverse img {
+        width: 100%; /* Rend l'image responsive */
+        max-width: 300px; /* Limite la taille maximale de l'image */
+        margin-bottom: 1rem; /* Ajoute de l'espace entre l'image et le texte */
+    }
+
+    .section-content.reverse .text-block {
+        width: 100%; /* Assure que le texte prend toute la largeur */
+    }
+  
+  
+/* Diplomes Responsive */
+  
+  	.diplomes {
+    text-align: center; /* Centre le texte et les images */
+    margin: 2rem 0; /* Ajoute un espacement autour de la section */
+    border-bottom: 1px solid #e0e0e0;
+  	padding: 1.5rem 0;
+    }
+
+    .diplomes p {
+        font-size: 1.2rem; /* Ajuste la taille du texte */
+        color: #333; /* Couleur du texte */
+        margin-bottom: 1rem; /* Ajoute un espacement sous le texte */
+    }
+
+    .diplomes-images {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        flex-wrap: wrap; /* Permet aux images de passer à la ligne si nécessaire */
+    }
+
+    .diplomes-images img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .diplomes-images img:hover {
+        transform: scale(1.1); /* Agrandit légèrement l'image au survol */
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Accentue l'ombre au survol */
+    }
+  	
+  	.langues .image {
+        flex: 1 1 calc(40% - 10px); /* Deux images par ligne */
+      	width: 40%;
+    }
+  
+  	.logo-container {
+      display: none;
+	}
+  
+  	.slider .logo {
+      display: none;
+    }
+
+    /* Styles pour les logos */
+    .logo {
+      display: none;
+    }
+
+	.photos-container-chanteur .photo-chanteur:nth-child(4) {
+    	display: none;
+  	}
+  
+  	.influencer-container .tiktoks .tiktok:nth-child(n+2) {
+    	display: none;
+  	}
+  	
+  	.influencer-container {
+        flex-direction: column; /* Empile les sections (photo, nom et vidéos) verticalement */
+        align-items: center; /* Centre les éléments dans le container */
+      	height: 1000px;
+    }
+  
+  	.photo {
+        margin-bottom: 10px; /* Réduit l'espace sous la photo */
+    }
+
+    h1 {
+        margin-bottom: 10px; /* Réduit l'espace sous le nom */
+    }
+  
+  	.tiktok {
+      	max-width: 100%;
+        height: auto; /* Ajuste la hauteur automatiquement */
+        margin-bottom: 1px; /* Réduit l'espace sous la vidéo */
+    }
+  
+  	.tiktok iframe {
+        height: 100%; /* Utilise toute la hauteur du conteneur sans trop d'espace en bas */
+    }
+
+}

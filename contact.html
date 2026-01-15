@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <h1 id="main-title"><a href="/">Curriculum Vitae</a></h1>
+      <nav>
+        <div class="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <button class="close-menu" aria-label="Close menu"></button>
+
+        <ul>
+          <li><a href="Droit.html" id="law-link">Droit</a></li>
+          <li><a href="Programmation.html" id="programmation-link">Programmation</a></li>
+          <li><a href="Langues.html" id="langues-link">Langues</a></li>
+          <li><a href="Aviation.html" id="aviation-link">Aviation</a></li>
+          <li><a href="Passions.html" id="passions-link">Passions</a></li>
+          <li><a href="SMMA.html" id="smma-link">SMMA</a></li>
+          <li><a href="Mon livre.html" id="book-link">Mon Livre</a></li>        
+        </ul>
+        <div class="language-selector">
+          <select id="language-select" onchange="changeLanguage()">
+            <option value="fr" selected>FR</option>
+            <option value="en">EN</option>
+            <option value="es">ES</option>
+            <option value="jp">JP</option>
+          </select>
+        </div>
+      </nav>
+    </div>
+  </header>
+    <div class="content">
+        <h2>Contactez-moi</h2>
+        <p>Si vous avez des questions ou souhaitez me contacter, n'hésitez pas à remplir ce formulaire.</p>
+
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+            <!-- Clé d'accès Web3Forms -->
+            <input type="hidden" name="access_key" value="04c4bf4a-20a1-4614-a3c4-66179c9c409b">
+
+            <!-- Champ de nom -->
+            <div class="form-group">
+                <label for="name">Nom :</label>
+                <input type="text" id="name" name="name" placeholder="Votre nom" required>
+            </div>
+
+            <!-- Champ d'email -->
+            <div class="form-group">
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" placeholder="Votre email" required>
+            </div>
+
+            <!-- Champ de sujet -->
+            <div class="form-group">
+                <label for="subject">Sujet :</label>
+                <input type="text" id="subject" name="subject" placeholder="Le sujet de votre message" required>
+            </div>
+
+            <!-- Champ de message -->
+            <div class="form-group">
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" rows="5" placeholder="Votre message" required></textarea>
+            </div>
+
+            <!-- URL de redirection -->
+            <input type="hidden" name="redirect" value="https://web3forms.com/success">
+
+            <!-- Bouton de soumission -->
+            <button type="submit" class="submit-btn">Envoyer</button>
+        </form>
+    </div>
+
+    <footer>
+      <div class="footer-content">
+        <div>
+          <strong id="mail-label">Mail</strong><br>
+          <a href="mailto:theophane.maurey@gmail.com" id="email">theophane.maurey@gmail.com</a><br>
+        </div>
+        <div>
+          <strong id="quick-links-label">Liens Rapides</strong><br>
+          <a href="contact.html" id="contact-link">Contact</a><br>
+          <a href="https://www.linkedin.com/in/theophane-maurey-droit-numerique/" target="_blank" id="linkedin-link">LinkedIn</a>
+        </div>
+        <div>
+          <strong id="location-label">Localisation</strong><br>
+          <span id="location-text">La Rochelle, France</span>
+        </div>
+        <div class="footer-copyright">
+          &copy; 2025 Théophane Maurey. Tous droits réservés.
+        </div>
+      </div>
+    </footer>
+
+    <script src="contactscript.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,506 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1e2437;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column; /* Permet une structure verticale avec flexbox */
+    min-height: 100vh; /* Assure que la hauteur du body prend toute la fenêtre */
+}
+
+#main-title a {
+    color: #1e2437;  /* Couleur du texte */
+    text-decoration: none;  /* Enlève le soulignement du lien */
+    font-weight: bold;  /* Met le texte en gras */
+}
+
+main.content {
+    margin-top: 100px; /* Ajustez la valeur pour augmenter ou réduire l'espace */
+    padding: 20px; /* Ajoute un espacement intérieur pour un meilleur rendu */
+}
+
+.favicon {
+  	Display: none;
+    width: 16px; /* Ajustez selon vos besoins */
+    height: 16px;
+    margin-right: 8px; /* Espacement entre l'icône et le texte */
+    vertical-align: middle; /* Aligne l'icône avec le texte */
+    background-color: white; /* Fond blanc */
+    border-radius: 4px; /* Coins légèrement arrondis */
+	padding: 2px; /* Espacement intérieur pour une meilleure visibilité */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    position: fixed; /* Fait que le header reste toujours en haut */
+    top: 0; /* Place le header au sommet de la fenêtre */
+    left: 0;
+    width: 100%; /* S'assure que le header prend toute la largeur */
+    z-index: 1000; /* Place le header au-dessus des autres éléments */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ajoute une ombre pour démarquer le header */
+    box-sizing: border-box; /* Inclut padding et bordures dans la largeur totale */
+}
+
+main {
+    padding-top: 70px; /* Ajuste cette valeur selon la hauteur de ton header */
+}
+
+header h1 {
+    font-size: 1.5rem;
+    color: #1e2437;
+    font-weight: bold;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between; /* Espace entre le titre et les liens */
+    align-items: center;
+    max-width: 1200px; /* Largeur maximale pour la navbar */
+    width: 100%; /* Prend toute la largeur disponible */
+    padding: 0 20px; /* Ajoute un peu de marge intérieure */
+    box-sizing: border-box;
+    margin: 0 auto; /* Centre la navbar dans le header */
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    gap: 20px; /* Espacement entre les liens */
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.9rem;
+  	padding: 5px 10px;
+    transition: color 0.3s ease-in-out;
+
+}
+
+nav a:hover {
+    color: #3498db; /* Couleur des liens au survol */
+}
+
+.content {
+    max-width: 1200px;
+    margin: 40px auto;
+    text-align: center;
+    padding: 20px;
+    flex: 1; /* Permet au contenu de s'étendre pour remplir l'espace entre le header et le footer */
+}
+
+.content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.content p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Footer */
+footer {
+    background-color: #121829;
+    color: #ffffff;
+    padding: 30px 60px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%; /* S'assure que le fond prend toute la largeur */
+    box-sizing: border-box; /* Prendre en compte padding et border dans la largeur totale */
+    text-align: left; /* Aligner le texte à gauche par défaut */
+    display: flex;
+    align-items: center;
+    margin: 0 auto; /* Centrer le footer */
+}
+
+footer .footer-content {
+    width: 100%; /* S'assurer que le conteneur prend toute la largeur de son parent */
+    max-width: 1200px; /* Largeur maximale pour le contenu */
+    margin: 0 auto; /* Centrer le contenu */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Trois colonnes de largeur égale */
+    gap: 20px; /* Espace entre les colonnes */
+
+}
+
+footer .footer-content > div {
+    display: flex;
+    flex-direction: column; /* Organiser les éléments verticalement dans chaque colonne */
+    gap: 1px; /* Espace entre les éléments dans chaque colonne */
+}
+
+footer div {
+    margin-bottom: 10px;
+}
+
+footer a {
+    color: #aaa;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #3498db; /* Couleur des liens au survol */
+}
+
+/* Style for the copyright text */
+.footer-copyright {
+    width: 100%; /* Ensure it takes up the full width */
+    text-align: center;
+    margin-top: 20px; /* Space between the content and copyright */
+    font-size: 0.9rem;
+    color: #ffffff;
+    border-top: 1px solid #333; /* Ligne de séparation en haut */
+    padding-top: 10px;
+  	grid-column: span 3;
+
+  }
+  
+
+.language-selector {
+    margin-left: 20px;
+}
+
+select {
+    background-color: #1e2437;
+    color: #ffffff;
+    border: none;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.text-and-image {
+    display: flex;
+    align-items: center; /* Aligne verticalement si nécessaire */
+    justify-content: flex-start; /* Texte à gauche et image à droite */
+    gap: 20px; /* Espacement entre le texte et l'image */
+}
+
+.text-content {
+    flex: 1; /* Permet au texte de prendre tout l'espace disponible */
+    text-align: left; /* Aligne le texte à gauche */
+}
+
+.image-placeholder img {
+    width: 100%;
+  	height: 600px;
+    margin-left: 20px auto;
+    background-color: #444;
+    border-radius: 10px;
+    justify-content: flex-start;
+}
+
+
+.language-selector {
+    margin-left: 20px;
+}
+
+select {
+    background-color: #1e2437;
+    color: #ffffff;
+    border: none;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+/* Styles pour le menu burger */
+.burger {
+	display: none; /* Masqué par défaut */
+    flex-direction: column;
+    justify-content: space-around;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+    position: absolute; /* Permet de le positionner librement */
+	top: 40%; /* Aligne verticalement au centre du header */
+    left: 60%; /* Aligne horizontalement au centre du header */
+    z-index: 1000; /* S'assure qu'il reste au-dessus des autres éléments */
+}
+
+.burger span {
+    display: block;
+    height: 3px; /* Épaisseur des barres */
+    width: 100%; /* Largeur des barres */
+    background-color: #121829; /* Barres en bleu foncé */
+    border-radius: 2px; /* Coins arrondis des barres */
+    transition: all 0.3s ease-in-out; /* Ajoute une transition pour l'état actif */
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 3px 0;
+}
+
+
+nav {
+    display: flex;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #1e2437;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+/* Style contact */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  	margin-bottom: 20px; /* Ajoute un espacement sous le bouton */
+}
+
+.form-group input, .form-group textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #2980b9; /* Bordure bleue claire */
+    border-radius: 5px;
+    background-color: #2c3e50; /* Fond gris-bleu sombre */
+    color: #ffffff; /* Texte blanc */
+    transition: border 0.3s ease;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    border-color: #3498db; /* Bordure bleu clair au focus */
+    outline: none;
+}
+
+.submit-btn {
+    padding: 10px 20px;
+    background-color: #3498db; /* Fond bleu clair */
+    color: #ffffff; /* Texte blanc */
+    border: none;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #2980b9; /* Couleur du bouton au survol (bleu plus foncé) */
+}
+
+.close-menu {
+  display: none;
+  }
+
+
+/* Responsivité */
+@media (max-width: 950px) {
+    /* Cacher les éléments de menu par défaut */
+    nav ul {
+        display: none; /* Cache les liens de navigation */
+        padding: 0;
+        margin: 0;
+    }
+  
+    .favicon {
+        Display: none;
+        width: 16px; /* Ajustez selon vos besoins */
+        height: 16px;
+        margin-right: 8px; /* Espacement entre l'icône et le texte */
+        vertical-align: middle; /* Aligne l'icône avec le texte */
+        background-color: white; /* Fond blanc */
+        border-radius: 4px; /* Coins légèrement arrondis */
+        padding: 2px; /* Espacement intérieur pour une meilleure visibilité */
+	}
+
+    /* Affichage du menu burger */
+    nav.active ul {
+		display: flex; /* Affiche les liens lorsque "active" est ajouté */
+        flex-direction: column; /* Positionne les liens verticalement */
+        position: fixed; /* Fixe le menu en haut de l'écran */
+        top: 0; /* Colle le menu en haut */
+        right: 0; /* Aligne le menu sur le côté droit */
+        background-color: #1e2437; /* Fond sombre */
+        width: 100%; /* Prend toute la largeur */
+        max-height: calc(100vh - 60px); /* Limite la hauteur du menu pour qu'il ne prenne pas toute la hauteur de la page */
+        overflow-y: auto; /* Ajoute une barre de défilement si le contenu dépasse */
+        padding: 20px;
+        box-sizing: border-box; /* Assure que le padding est inclus dans la largeur */
+        z-index: 999; /* Mets le menu au-dessus des autres éléments */
+    	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); /* Ombre légère */
+	}
+
+    /* Liens dans le menu burger */
+    nav.active ul li {
+        margin: 10px 0; /* Espacement entre les liens */
+        text-align: center; /* Centre les liens */
+    }
+
+    /* Apparence des liens du menu */
+    nav.active ul li a {
+        color: #ffffff; /* Texte en blanc */
+        font-size: 1.2rem;
+        text-decoration: none;
+        padding: 10px;
+        transition: color 0.3s ease;
+    }
+
+    nav.active ul li a:hover {
+        color: #3498db; /* Couleur au survol */
+    }
+
+    /* Burger bouton */
+    .burger {
+        display: flex; /* Affiche le bouton burger */
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30px;
+        height: 25px;
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        z-index: 1000; /* Place le burger bouton au-dessus du reste */
+    }
+
+    /* Barres du burger */
+    .burger span {
+        display: block;
+        width: 100%;
+        height: 4px;
+        background-color: #1e2437; /* Couleur des barres */
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+
+    /* Bouton pour fermer le menu (croix) */
+    .close-menu {
+        position: absolute;
+        top: 20px; /* Position en haut à droite */
+        right: 20px;
+        width: 30px;
+        height: 30px;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        z-index: 1001; /* Met la croix au-dessus du menu */
+        display: none; /* Caché par défaut */
+    }
+
+    .close-menu::before,
+    .close-menu::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 20px;
+        height: 2px;
+        background-color: #ffffff; /* Couleur de la croix */
+        transition: all 0.3s ease;
+    }
+
+    .close-menu::before {
+        transform: translate(-50%, -50%) rotate(45deg); /* Premier barre de la croix */
+    }
+
+    .close-menu::after {
+        transform: translate(-50%, -50%) rotate(-45deg); /* Deuxième barre de la croix */
+    }
+
+    /* Affichage de la croix quand le menu est actif */
+    nav.active .close-menu {
+        display: block; /* Affiche la croix lorsqu'on clique sur le burger */
+    }
+
+/* Style du selecteur de langue */
+    .language-selector {
+        margin-left: 20px;
+    }
+
+    .language-selector select {
+        background-color: #1e2437;
+        color: #ffffff;
+        border: none;
+        padding: 5px;
+        border-radius: 4px;
+        font-size: 0.9rem;
+    }
+
+	footer {
+    	background-color: #121829;
+    	color: #ffffff;
+    	padding: 20px;
+    	display: flex;
+    	justify-content: space-between;
+    	flex-wrap: wrap;
+    	width: 100%; /* S'assure que le footer prend toute la largeur */
+    	box-sizing: border-box; /* Prendre en compte padding et border dans la largeur totale */
+	}
+  
+	footer .footer-content {
+    	background-color: #121829;
+    	color: #ffffff;
+    	padding: 20px;
+    	display: flex;
+    	justify-content: space-between;
+    	flex-wrap: wrap;
+    	width: 100%; /* S'assure que le footer prend toute la largeur */
+    	box-sizing: border-box; /* Prendre en compte padding et border dans la largeur totale */
+	}
+
+	footer div {
+    	margin-bottom: 10px;
+	}
+
+	footer a {
+    	color: #ffffff;
+    	text-decoration: none;
+	}
+
+
+/* Style for the copyright text */
+	footer .footer-copyright {
+    	width: 100%; /* Ensure it takes up the full width */
+    	text-align: center;
+    	margin-top: 20px; /* Space between the content and copyright */
+    	font-size: 0.9rem;
+    	color: #ffffff;
+	}
+
+    #main-title a {
+        color: #1e2437;  /* Couleur du texte */
+        text-decoration: none;  /* Enlève le soulignement du lien */
+        font-weight: bold;  /* Met le texte en gras */
+    }
+  
+  	.text-and-image {
+        flex-direction: column; /* Empile le texte et l'image verticalement */
+        align-items: center; /* Centre le contenu pour un meilleur rendu sur mobile */
+        margin-top: 50px; /* Réduit la marge pour un écran plus petit */
+    }
+
+    .text-content {
+        text-align: center; /* Centre le texte sur mobile pour une meilleure lisibilité */
+        margin-bottom: 20px; /* Ajoute un espace entre le texte et l'image */
+    }
+
+    .image-placeholder img {
+        width: 80%; /* Réduit la taille de l'image pour qu'elle s'adapte à l'écran */
+        max-width: 300px; /* Fixe une largeur maximale pour éviter que l'image ne soit trop grande */
+        height: auto; /* Maintient le ratio d'aspect */
+    }
+
+}

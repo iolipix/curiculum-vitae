@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passions</title>
+    <link rel="stylesheet" href="page.css">
+</head>
+<body>
+    <header>
+       <div class="nav-container">
+        <h1 id="main-title"><a href="/">Curriculum Vitae</a></h1>
+        <nav>
+            <div class="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <button class="close-menu" aria-label="Close menu"></button>
+
+            <ul>
+                <li><a href="Droit.html" id="law-link">Droit</a></li>
+                <li><a href="Programmation.html" id="programmation-link">Programmation</a></li>
+                <li><a href="Langues.html" id="langues-link">Langues</a></li>
+                <li><a href="Aviation.html" id="aviation-link">Aviation</a></li>
+                <li><a href="Passions.html" id="passions-link">Passions</a></li>
+                <li><a href="SMMA.html" id="smma-link">SMMA</a></li>
+                <li><a href="Mon livre.html" id="book-link">Mon Livre</a></li>
+            </ul>
+            <div class="language-selector">
+                <select id="language-select" onchange="changeLanguage()">
+                    <option value="fr" selected>FR</option>
+                    <option value="en">EN</option>
+                    <option value="es">ES</option>
+                    <option value="jp">JP</option>
+                </select>
+            </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="content">
+        <section class="section">
+            <h1 class="section-title" id="content-title">Passions</h1>
+            <div class="section-content">
+                <div class="text-block">
+                    <p id="content-section1">
+                        Ayant une très grande passion pour les jeux vidéo, j’ai développé de manière significative mes connaissances dans ce domaine pendant mon adolescence, notamment sur leur histoire et leur technologie.
+                    </p>
+                </div>
+            </div>
+            <div class="section-lol">
+                <a href="https://www.op.gg/summoners/euw/iolipix-EUW/" target="_blank">
+                  <img src="src/Master.jpg" alt="Master" class="image">
+             	</a>
+                <div class="text-block">
+                  <p id="content-section2">
+                    L’un de ces jeux m’a particulièrement passionné : League of Legends. Assurant un bon niveau au poste d’ADC, j’ai atteint le top 0,002 % des meilleurs joueurs du monde en file flexible (environ top 10 000).
+                  </p>
+                </div>
+            </div>
+            <div class="section-content reverse">
+                <img src="src/Science.jpg" alt="Livre de droit" class="image">
+                <div class="text-block">
+                    <p id="content-section3">
+                        Les sciences ont toujours été un domaine dans lequel j’excelle. Passionné par les mathématiques, la physique, l’astronomie et la technologie, je n’ai jamais cessé de me documenter sur ces sujets, malgré mon choix d’emprunter une voie littéraire pour m’adapter au parcours que je souhaitais suivre.
+                    </p>
+                </div>
+            </div>
+            <div class="section-content">
+                <img src="src/Stir.jpg" alt="Livre de droit" class="image">
+                <div class="text-block">
+                    <p id="content-section4">
+                        Ayant reçu une éducation martiale, que ce soit à travers des valeurs telles que l’ordre, la discipline et l’expérimentation, mais aussi grâce à ma connaissance des armes et des armées, j’ai choisi de rejoindre le Club de Tireurs Sportifs de Saintonge.
+                    </p>
+                </div>
+            </div>
+            <div class="section-content reverse">
+                <img src="src/Escrime.jpg" alt="Cabinet d'avocats" class="image">
+                <div class="text-block">
+                    <p id="content-section5">
+                        En primaire, j’ai décidé de débuter l’escrime afin d’apprendre à manier l’épée. Cependant, le premier club d’escrime étant éloigné, je ne pouvais pas supporter les longs trajets pour de si petits entraînements. Les plaisirs d’une maison dans la campagne de Beauce sont à nuancer avec le désert des infrastructures... Plus tard, j’ai repris l’escrime et pu continuer mon apprentissage de l’épée.
+                    </p>
+                </div>
+            </div>
+            <div class="section-content">
+                <img src="src/Bateau.jpg" alt="Cabinet d'avocats" class="image">
+                <div class="text-block">
+                    <p id="content-section6">
+                        Ayant un très bon sens météorologique, cartographique et de l’orientation, ainsi qu’habitant à La Rochelle, j’ai trouvé dommage de ne pas passer mon permis bateau (côtier). Fin 2024, j’ai décidé de franchir le pas et obtenu ce permis avec succès.
+                    </p>
+                </div>
+            </div>
+            <div class="section-content reverse">
+                <img src="src/engine.jpg" alt="Objectifs futurs" class="image">
+                <div class="text-block">
+                    <p id="content-section7">
+                        La pratique de ces activités autour de moteurs ne m’a pas laissé indifférent à la mécanique. J’ai passé mon permis B dès mes 18 ans et je conserve encore aujourd’hui une profonde passion pour l’ingénierie.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <strong id="mail-label">Mail</strong><br>
+                <a href="mailto:theophane.maurey@gmail.com" id="email">theophane.maurey@gmail.com</a><br>
+            </div>
+            <div>
+                <strong id="quick-links-label">Liens Rapides</strong><br>
+                <a href="contact.html" id="contact-link">Contact</a><br>
+                <a href="https://www.linkedin.com/in/theophane-maurey-droit-numerique/" target="_blank" id="linkedin-link">LinkedIn</a>
+            </div>
+            <div>
+                <strong id="location-label">Localisation</strong><br>
+                <span id="location-text">La Rochelle, France</span>
+            </div>
+            <div class="footer-copyright">
+                &copy; 2025 Théophane Maurey. Tous droits réservés.
+            </div>
+        </div>
+    </footer>
+
+    <script src="passionsscript.js"></script>
+</body>
+</html>

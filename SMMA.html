@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMMA</title>
+    <link rel="stylesheet" href="page.css">
+  	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css" />
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css" />
+</head>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+  <script>
+      $(document).ready(function () {
+          // Sélection du slider
+          const $slider = $('.slider');
+
+          // Fonction pour activer ou désactiver Slick Slider en fonction de la taille de la fenêtre
+          function toggleSlick() {
+              const windowWidth = $(window).width();
+
+              if (windowWidth < 950) {
+                  // Désactive le slider si la largeur de la fenêtre est inférieure à 950px
+                  if ($slider.hasClass('slick-initialized')) {
+                      $slider.slick('unslick'); // Supprime le slider
+                  }
+              } else {
+                  // Active le slider si la largeur de la fenêtre est supérieure ou égale à 950px
+                  if (!$slider.hasClass('slick-initialized')) {
+                      $slider.slick({
+                          dots: true,
+                          infinite: true,
+                          speed: 300,
+                          slidesToShow: 4,
+                          slidesToScroll: 1,
+                          autoplay: true,
+                          autoplaySpeed: 2000,
+                      });
+                  }
+              }
+          }
+
+          // Initialisation au chargement de la page
+          toggleSlick();
+
+          // Vérifie la taille de la fenêtre lors des redimensionnements
+          $(window).on('resize', function () {
+              toggleSlick();
+          });
+      });
+  </script>
+
+<body>
+    <header>
+       <div class="nav-container">
+        <h1 id="main-title"><a href="/">Curriculum Vitae</a></h1>
+        <nav>
+            <div class="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <button class="close-menu" aria-label="Close menu"></button>
+
+            <ul>
+                <li><a href="Droit.html" id="law-link">Droit</a></li>
+                <li><a href="Programmation.html" id="programmation-link">Programmation</a></li>
+                <li><a href="Langues.html" id="langues-link">Langues</a></li>
+                <li><a href="Aviation.html" id="aviation-link">Aviation</a></li>
+                <li><a href="Passions.html" id="passions-link">Passions</a></li>
+                <li><a href="SMMA.html" id="smma-link">SMMA</a></li>
+                <li><a href="Mon livre.html" id="book-link">Mon Livre</a></li>
+            </ul>
+            <div class="language-selector">
+                <select id="language-select" onchange="changeLanguage()">
+                    <option value="fr" selected>FR</option>
+                    <option value="en">EN</option>
+                    <option value="es">ES</option>
+                    <option value="jp">JP</option>
+                </select>
+            </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="content">
+        <section class="section">
+            <h1 class="section-title" id="content-title">SMMA</h1>
+            <div class="section-content">
+                <div class="text-block">
+                    <p id="content-section1">
+                        Avec ma passion pour les jeux vidéo et les sciences, j’ai rapidement développé une culture forte d’internet. La nécessité de savoir communiquer sur les réseaux, que ce soit pour apprendre ou se démarquer, m’a poussé à m’intéresser au milieu des influenceurs.
+                    </p>
+                </div>
+            </div>
+            <div class="section-content">
+                <img src="src/YTB.jpg" alt="Clavier" class="image">
+                <div class="text-block">
+                    <p id="content-section2">
+                       En 2013, inspiré par la première génération de YouTubers, j’ai décidé de créer ma première chaîne YouTube Gaming. Sur mon chemin, j’ai croisé de nombreux influenceurs et réussi à m’entourer de personnes plus ou moins professionnelles, formatrices et bienveillantes, compte tenu de mon jeune âge.
+                    </p>
+                </div>
+            </div>
+            <div class="section-content reverse">
+                <img src="src/iolipix.jpg" alt="Livre de droit" class="image">
+                <div class="text-block">
+                    <p id="content-section3">
+                        J’ai poursuivi dans cette voie pendant de nombreuses années, notamment pour promouvoir mon serveur Minecraft.
+                    </p>
+                </div>
+            </div>
+            <div class="section-content">
+                <img src="src/Camera Photo.jpg" alt="Livre de droit" class="image">
+                <div class="text-block">
+                    <p id="content-section4">
+                        Frustré par les critiques et insatisfait de la qualité de mes vidéos, j’ai décidé d’approfondir mes connaissances en cinématographie. Cela m’a conduit à rejoindre l’association Caméra Photo de Saintonge, où j’ai pu affiner mes compétences.
+                    </p>
+                </div>
+            </div>
+            <div class="section-content reverse">
+              	<div class="video-container">
+                    <iframe 
+                        src="https://www.youtube.com/embed/RoMHczkqTww?si=816syJ-SVRUYte8v" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                    <iframe 
+                        src="https://www.youtube.com/embed/YTTDUcUgIfc?si=0com_dIv_-3LtNkn" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="text-block">
+                    <p id="content-section5">Quelques années plus tard, fort de ces améliorations, j’ai lancé ma web-série La Vue d’un Geek, dédiée à l’histoire et aux connaissances autour de la culture geek.
+                  </p>
+                </div>
+            </div>
+          	<h1 class="section-title" id="content-title">Assistant d'influenceurs</h1>
+            <div class="section-content reverse">
+                <div class="text-block">
+                    <p id="content-section6">
+                        En grandissant, j’ai consacré moins de temps à cette activité. Cependant, une fois à l’université, j’ai décidé d’y revenir à temps partiel après mes cours, notamment en devenant assistant d’influenceur et en participant à divers projets audiovisuels.
+                    </p>
+                </div>
+            </div>
+          	<div class="influencer-container">
+                <div class="info">
+                  <h1>Anto.gdh</h1>
+                  <img src="src/anto.jpg" alt="Photo de l'influenceur" class="photo">
+                </div>
+                <div class="tiktoks">
+                  <div class="tiktok">
+                    <iframe src="https://www.tiktok.com/embed/7247958571223174427" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                  </div>
+                  <div class="tiktok">
+                    <iframe src="https://www.tiktok.com/embed/7118413469229075718" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                  </div>
+                  <div class="tiktok">
+                    <iframe src="https://www.tiktok.com/embed/7158853241755815173" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                  </div>
+                </div>
+            </div>
+          	<div class="influencer-container">
+                <div class="info">
+                  <h1>Appellez-moi Theo</h1>
+                  <img src="src/theo.jpg" alt="Photo de l'influenceur" class="photo">
+                </div>
+                <div class="tiktoks">
+                  <div class="tiktok">
+                    <iframe src="https://www.tiktok.com/embed/7147336874506407173" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                  </div>
+                  <div class="tiktok">
+                    <iframe src="https://www.tiktok.com/embed/7126941958647385349" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                  </div>
+                  <div class="tiktok">
+                    <iframe src="https://www.tiktok.com/embed/7124735627744120070" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                  </div>
+                </div>
+            </div>
+          	<div class="sound-container">
+                <!-- Spotify sound -->
+                <div class="spotify-container">
+                    <iframe src="https://open.spotify.com/embed/album/68pEyLFs0fnlzxXQRYKJpP?utm_source=generator" width="100%" height="80" frameborder="0" allow="encrypted-media"></iframe>
+                </div>
+
+                <!-- Photos du chanteur -->
+                <div class="photos-container-chanteur">
+                    <img src="src/mathis1.jpg" alt="Photo du chanteur 1" class="photo-chanteur">
+                    <img src="src/mathis3.jpg" alt="Photo du chanteur 2" class="photo-chanteur">
+                    <img src="src/mathis2.jpg" alt="Photo du chanteur 3" class="photo-chanteur">
+                    <img src="src/mathis4.jpg" alt="Photo du chanteur 4" class="photo-chanteur">
+                </div>
+
+                <!-- Texte sous les photos -->
+                <div class="description">
+                    <p id="content-section7">J'ai aussi réalisé l'image de Brwns, un artiste musical.</p>
+                </div>
+            </div>
+          	<div class="section-content">
+                <div class="text-block">
+                    <p id="content-section8">
+                       	Cette expérience acquise dès mon jeune âge m’a permis de développer une connaissance très polyvalente en cinématographie : manipulation des caméras, montage, logiciels, colorimétrie, effets spéciaux, audio, et gestion de l’image de marque. La diversité des personnes avec lesquelles j'ai eu l'occasion de travailler m'a obligé à utiliser différents logiciels, notamment pour retravailler ou personnaliser les documents de post-production.
+                    </p>
+                </div>
+            </div>
+        </section>
+      <div class="logos-container">
+        <div class="slider">
+          <div><img src="src/logos/1.png" alt="Logo logiciel 1" class="logo"></div>
+          <div><img src="src/logos/2.png" alt="Logo logiciel 2" class="logo"></div>
+          <div><img src="src/logos/3.png" alt="Logo logiciel 3" class="logo"></div>
+          <div><img src="src/logos/4.png" alt="Logo logiciel 4" class="logo"></div>
+          <div><img src="src/logos/5.png" alt="Logo logiciel 5" class="logo"></div>
+          <div><img src="src/logos/6.png" alt="Logo logiciel 6" class="logo"></div>
+          <div><img src="src/logos/7.png" alt="Logo logiciel 7" class="logo"></div>
+          <div><img src="src/logos/8.png" alt="Logo logiciel 8" class="logo"></div>
+          <div><img src="src/logos/9.png" alt="Logo logiciel 9" class="logo"></div>
+          <div><img src="src/logos/10.png" alt="Logo logiciel 10" class="logo"></div>
+          <div><img src="src/logos/11.png" alt="Logo logiciel 11" class="logo"></div>
+          <div><img src="src/logos/12.png" alt="Logo logiciel 12" class="logo"></div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <strong id="mail-label">Mail</strong><br>
+                <a href="mailto:theophane.maurey@gmail.com" id="email">theophane.maurey@gmail.com</a><br>
+            </div>
+            <div>
+                <strong id="quick-links-label">Liens Rapides</strong><br>
+                <a href="contact.html" id="contact-link">Contact</a><br>
+                <a href="https://www.linkedin.com/in/theophane-maurey-droit-numerique/" target="_blank" id="linkedin-link">LinkedIn</a>
+            </div>
+            <div>
+                <strong id="location-label">Localisation</strong><br>
+                <span id="location-text">La Rochelle, France</span>
+            </div>
+            <div class="footer-copyright">
+                &copy; 2025 Théophane Maurey. Tous droits réservés.
+            </div>
+        </div>
+    </footer>
+
+    <script src="smmascript.js"></script>
+</body>
+</html>

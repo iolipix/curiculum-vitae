@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programmation</title>
+    <link rel="stylesheet" href="page.css">
+</head>
+<body>
+    <header>
+       <div class="nav-container">
+        <h1 id="main-title"><a href="/">Curriculum Vitae</a></h1>
+        <nav>
+            <div class="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <button class="close-menu" aria-label="Close menu"></button>
+
+            <ul>
+                <li><a href="Droit.html" id="law-link">Droit</a></li>
+                <li><a href="Programmation.html" id="programmation-link">Programmation</a></li>
+                <li><a href="Langues.html" id="langues-link">Langues</a></li>
+                <li><a href="Aviation.html" id="aviation-link">Aviation</a></li>
+                <li><a href="Passions.html" id="passions-link">Passions</a></li>
+                <li><a href="SMMA.html" id="smma-link">SMMA</a></li>
+                <li><a href="Mon livre.html" id="book-link">Mon Livre</a></li>
+            </ul>
+            <div class="language-selector">
+                <select id="language-select" onchange="changeLanguage()">
+                    <option value="fr" selected>FR</option>
+                    <option value="en">EN</option>
+                    <option value="es">ES</option>
+                    <option value="jp">JP</option>
+                </select>
+            </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="content">
+        <section class="section">
+            <h1 class="section-title" id="content-title">Programmation</h1>
+            <div class="section-content">
+                <img src="src/Arcade2.jpg" alt="Clavier" class="image">
+                <div class="text-block">
+                    <p id="content-section1">
+                        Ayant grandi dans un environnement geek, j’ai été initié très tôt à l’informatique.
+                    </p>
+                </div>
+            </div>
+            <div class="section-content reverse">
+                <img src="src/Alone Over.jpg" alt="Livre de droit" class="image">
+                <div class="text-block">
+                    <p id="content-section2">
+                        À l'âge de onze ans, poussé par l’envie de partager un univers commun avec mes amis, j’ai décidé, 
+                      	après mes journées passées au collège, de coder mon premier serveur Minecraft : Alone-Over. 
+                      	Rapidement, ce projet a pris une certaine ampleur et est resté une référence pour notre groupe. 
+                      	Cette expérience m’a offert mes premières bases en Java ainsi qu’en gestion de projet collaboratif.
+                    </p>
+                </div>
+            </div>
+            <div class="section-content">
+                <img src="src/Gameboy.jpg" alt="Livre de droit" class="image">
+                <div class="text-block">
+                    <p id="content-section3">
+                        En parallèle, j’ai longuement exploré le domaine du hardware : que ce soit en montant mes premiers PC, 
+                      	en démontant mes consoles, ou en étudiant l’architecture des processeurs.
+
+                    </p>
+                </div>
+            </div>
+            <div class="section-content reverse">
+                <img src="src/Borne.jpg" alt="Cabinet d'avocats" class="image">
+                <div class="text-block">
+                    <p id="content-section4">
+                        J’ai également créé ma propre borne d’arcade, en assemblant des planches, en programmant les manettes 
+                      	et les applications nécessaires.
+                    </p>
+                </div>
+            </div>
+            <div class="diplomes">
+              <p id="content-section5">Par la suite, j’ai validé plusieurs certificats pour attester de mes compétences : 
+                HTML, CSS, JavaScript, SQL et Python.
+              	C'est dans l'objectif de prouver mes compétences en html, css et javascript que j'ai souhaité créer mon web cv. </p>
+              <div class="diplomes-images">
+                <a href="https://certificates.cs50.io/954dc998-3739-43a5-93f6-7c5ac113b51c.pdf?size=letter" target="_blank" title="Voir le diplôme HLS2X">
+                  <img src="src/CS50P.jpg" alt="Diplôme HLS2X">
+                </a>
+                <a href="https://openclassrooms.com/fr/course-certificates/6423177799" target="_blank" title="Voir le diplôme JapCiv">
+                  <img src="src/Chtmlcss.jpg" alt="Diplôme JapCiv">
+                </a>
+                <a href="https://openclassrooms.com/fr/course-certificates/5037053609" target="_blank" title="Voir le diplôme JapCiv">
+                  <img src="src/Cjavascript.jpg" alt="Diplôme JapCiv">
+                </a>
+                <a href="https://openclassrooms.com/fr/course-certificates/2192332244" target="_blank" title="Voir le diplôme JapCiv">
+                  <img src="src/Csql.jpg" alt="Diplôme JapCiv">
+                </a>
+              </div>
+            </div>
+          	<div class="section-content">
+                <img src="src/cpu.jpg" alt="Livre de droit" class="image">
+                <div class="text-block">
+                    <p id="content-section6">
+                        Aujourd'hui, je continue d'approfondir mes connaissances en informatique en explorant des domaines connexes tels que les mathématiques, la mécanique quantique, l'architecture CPU, et bien plus encore.
+                    </p>
+                </div>
+            </div>
+            <div class="section-content reverse">
+                <img src="src/Badinter.jpg" alt="Objectifs futurs" class="image">
+                <div class="text-block">
+                    <p id="content-section7">
+                        J’ai eu l’opportunité d’effectuer un stage au Conseil Départemental de la Charente, dans la maintenance de parc informatique. 
+                      	Cette expérience m’a permis de découvrir une approche plus professionnelle du domaine de l’informatique.
+                    </p>
+                </div>
+            </div>
+          	<div class="section-content">
+                <img src="src/python.jpg" alt="Livre de droit" class="image">
+                <div class="text-block">
+                    <p id="content-section8">
+                        Actuellement en formation de niveau Bac +3 en développement algorithmique et d'application, j'apprends la maîtrise de Python et envisage de me spécialiser dans un Bac +5 pour devenir data scientist.
+                    </p>
+                </div>
+                	</div>
+                    <div class="section-lol">
+                        <a href="https://www.jurinapse.com/" target="_blank">
+                          <img src="src/jurinapse.jpg" alt="Master" class="image">
+                        </a>
+                        <div class="text-block">
+                          <p id="content-section2">
+                            Actuellement Président du Réseau Social JuriNapse. J'ai pu monter un ensemble d'algorithmes et d'IA permettant des solutions pour les juristes et les personnes étudiants le droit, dans leur compréhension de cette matière.
+                          </p>
+                        </div>
+                    </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <strong id="mail-label">Mail</strong><br>
+                <a href="mailto:theophane.maurey@gmail.com" id="email">theophane.maurey@gmail.com</a><br>
+            </div>
+            <div>
+                <strong id="quick-links-label">Liens Rapides</strong><br>
+                <a href="contact.html" id="contact-link">Contact</a><br>
+                <a href="https://www.linkedin.com/in/theophane-maurey-droit-numerique/" target="_blank" id="linkedin-link">LinkedIn</a>
+            </div>
+            <div>
+                <strong id="location-label">Localisation</strong><br>
+                <span id="location-text">La Rochelle, France</span>
+            </div>
+            <div class="footer-copyright">
+                &copy; 2025 Théophane Maurey. Tous droits réservés.
+            </div>
+        </div>
+    </footer>
+
+    <script src="programscript.js"></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Langues</title>
+    <link rel="stylesheet" href="page.css">
+</head>
+<body>
+    <header>
+       <div class="nav-container">
+        <h1 id="main-title"><a href="/">Curriculum Vitae</a></h1>
+        <nav>
+            <div class="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <button class="close-menu" aria-label="Close menu"></button>
+
+            <ul>
+                <li><a href="Droit.html" id="law-link">Droit</a></li>
+                <li><a href="Programmation.html" id="programmation-link">Programmation</a></li>
+                <li><a href="Langues.html" id="langues-link">Langues</a></li>
+                <li><a href="Aviation.html" id="aviation-link">Aviation</a></li>
+                <li><a href="Passions.html" id="passions-link">Passions</a></li>
+                <li><a href="SMMA.html" id="smma-link">SMMA</a></li>
+                <li><a href="Mon livre.html" id="book-link">Mon Livre</a></li>
+            </ul>
+            <div class="language-selector">
+                <select id="language-select" onchange="changeLanguage()">
+                    <option value="fr" selected>FR</option>
+                    <option value="en">EN</option>
+                    <option value="es">ES</option>
+                    <option value="jp">JP</option>
+                </select>
+            </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="content">
+        <section class="section">
+            <h1 class="section-title" id="content-title">Langues</h1>
+            <div class="section-content reverse">
+              	<img src="src/Italie.jpg" alt="Clavier" class="image">
+                <div class="text-block">
+                    <p id="content-section1">
+                        Né dans l’Europe de Schengen, j’ai eu la chance de voyager dans nos pays frontaliers et de découvrir leurs cultures : Angleterre, Espagne, Italie, Allemagne. Voyager dès mon plus jeune âge m’a révélé une frustration : celle de ne pas pouvoir communiquer avec les autres enfants. Très vite, 
+                      	j’ai développé un goût prononcé pour l’apprentissage de nouvelles langues.
+                    </p>
+                </div>
+            </div>
+            <div class="section-content">
+                <img src="src/Londres.jpg" alt="Clavier" class="image">
+                <div class="text-block">
+                    <p id="content-section2">
+                        Mes heures passées sur l’ordinateur et internet m’ont rapidement amené à côtoyer des personnes du monde entier et à utiliser l’anglais, que ce soit pour apprendre des concepts non traduits ou pour communiquer dans l’univers des jeux vidéo.
+                    </p>
+                </div>
+            </div>
+            <div class="section-content reverse">
+                <img src="src/minna.jpg" alt="Livre de droit" class="image">
+                <div class="text-block">
+                    <p id="content-section3">
+                       Ma passion pour les animés et l’univers Nintendo m’a également donné un intérêt particulier pour le Japon, ce qui m’a poussé à vouloir apprendre la langue japonaise.
+                    </p>
+                </div>
+            </div>
+            <div class="section-content">
+                <img src="src/cecrl.jpg" alt="Livre de droit" class="image">
+                <div class="text-block">
+                    <p id="content-section4">
+                        Au collège, j’ai choisi l’anglais et l’espagnol comme langues étrangères. Mon implication et mon intérêt pour ces matières se sont traduits par de très bonnes notes, nourries par la qualité des enseignements reçus. Au lycée, j’ai poursuivi cet intérêt en optant pour l’enseignement de spécialité LLCE Anglais (Langues, Littératures et Cultures Étrangères).
+                    </p>
+                </div>
+            </div>
+            <div class="section-content reverse">
+                <img src="src/Parlementdevant.jpg" alt="Cabinet d'avocats" class="image">
+                <div class="text-block">
+                    <p id="content-section5">
+                        Arrivé à l’université, les langues me manquaient : celles enseignées en cours ne suffisaient pas à répondre à mes attentes. J’ai ainsi installé mes premières applications de correspondance linguistique (HelloTalk, Tandem, etc.) où j’ai passé beaucoup de temps à échanger avec des personnes d’autres pays, dont certaines sont devenues des amis avec qui je suis encore en contact.
+                    </p>
+                </div>
+            </div>
+            <div class="section-content">
+                <img src="src/shiosai.jpg" alt="Cabinet d'avocats" class="image">
+                <div class="text-block">
+                    <p id="content-section6">
+                        Porté par ce désir d’apprentissage, en 2023, j’ai rejoint l’association Shiosai afin d’améliorer mon niveau en japonais grâce aux cours qu’elle propose.
+                    </p>
+                </div>
+            </div>
+            <div class="langues">
+                <img src="src/Fr.jpg" alt="Objectifs futurs" class="image">
+              	<img src="src/En.jpg" alt="Objectifs futurs" class="image">
+              	<img src="src/jap.jpg" alt="Objectifs futurs" class="image">
+              	<img src="src/Esp.jpg" alt="Objectifs futurs" class="image">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <strong id="mail-label">Mail</strong><br>
+                <a href="mailto:theophane.maurey@gmail.com" id="email">theophane.maurey@gmail.com</a><br>
+            </div>
+            <div>
+                <strong id="quick-links-label">Liens Rapides</strong><br>
+                <a href="contact.html" id="contact-link">Contact</a><br>
+                <a href="https://www.linkedin.com/in/theophane-maurey-droit-numerique/" target="_blank" id="linkedin-link">LinkedIn</a>
+            </div>
+            <div>
+                <strong id="location-label">Localisation</strong><br>
+                <span id="location-text">La Rochelle, France</span>
+            </div>
+            <div class="footer-copyright">
+                &copy; 2025 Théophane Maurey. Tous droits réservés.
+            </div>
+        </div>
+    </footer>
+
+    <script src="languesscript.js"></script>
+</body>
+</html>
